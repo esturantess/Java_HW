@@ -12,13 +12,13 @@ public class Working_with_the_list {
     public static void main(String[] args) {
         List<Integer> numbers = fillTheList();
         List<Integer> temp = new ArrayList<>(numbers);
-        // Задание 1: Удалить четные числа из списка
+        // Р—Р°РґР°РЅРёРµ 1: РЈРґР°Р»РёС‚СЊ С‡РµС‚РЅС‹Рµ С‡РёСЃР»Р° РёР· СЃРїРёСЃРєР°
         removeEvenNumbers(temp);
-        // Задание 2: Найти минимальное значение в списке
-        System.out.println("Минимальное значение в списке: " + Collections.min(numbers));
-        // Задание 3: Найти максимальное значение в списке
-        System.out.println("Максимальное значение в списке: " + Collections.max(numbers));
-        // Задание 4: Найти среднее значение в списке
+        // Р—Р°РґР°РЅРёРµ 2: РќР°Р№С‚Рё РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ СЃРїРёСЃРєРµ
+        System.out.println("РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ СЃРїРёСЃРєРµ: " + Collections.min(numbers));
+        // Р—Р°РґР°РЅРёРµ 3: РќР°Р№С‚Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ СЃРїРёСЃРєРµ
+        System.out.println("РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ СЃРїРёСЃРєРµ: " + Collections.max(numbers));
+        // Р—Р°РґР°РЅРёРµ 4: РќР°Р№С‚Рё СЃСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ РІ СЃРїРёСЃРєРµ
         arithmeticMean(numbers);
     }
 
@@ -27,7 +27,7 @@ public class Working_with_the_list {
         for (int i = 0; i < 10; i++) {
             numbers.add(random.nextInt(21));
         }
-        System.out.println("Исходный список: " + numbers);
+        System.out.println("РСЃС…РѕРґРЅС‹Р№ СЃРїРёСЃРѕРє: " + numbers);
         return numbers;
     }
 
@@ -38,7 +38,7 @@ public class Working_with_the_list {
                 i -= 1;
             }
         }
-        System.out.println("Список без четных чисел: " + userList);
+        System.out.println("РЎРїРёСЃРѕРє Р±РµР· С‡РµС‚РЅС‹С… С‡РёСЃРµР»: " + userList);
     }
 
     public static void arithmeticMean(List<Integer> userList){
@@ -48,10 +48,10 @@ public class Working_with_the_list {
                 sum += integer;
             }
             int arithmetic_mean = sum / userList.size();
-            System.out.println("Среднее значение: " + arithmetic_mean);
+            System.out.println("РЎСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ: " + arithmetic_mean);
         }
         catch (Exception DivisionByZero){
-            System.out.println("Среднего значения нет, так как список пуст.");
+            System.out.println("РЎСЂРµРґРЅРµРіРѕ Р·РЅР°С‡РµРЅРёСЏ РЅРµС‚, С‚Р°Рє РєР°Рє СЃРїРёСЃРѕРє РїСѓСЃС‚.");
         }
     }
 }
