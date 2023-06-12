@@ -2,11 +2,11 @@ package HW_Lesson4;
 
 import java.util.LinkedList;
 
-//Реализуйте очередь с помощью LinkedList со следующими методами:
-//        enqueue() - помещает элемент в конец очереди,
-//        dequeue() - возвращает первый элемент из очереди и удаляет его,
-//        first() - возвращает первый элемент из очереди, не удаляя.
-//        Формат сдачи: ссылка на гит
+//Р РµР°Р»РёР·СѓР№С‚Рµ РѕС‡РµСЂРµРґСЊ СЃ РїРѕРјРѕС‰СЊСЋ LinkedList СЃРѕ СЃР»РµРґСѓСЋС‰РёРјРё РјРµС‚РѕРґР°РјРё:
+//        enqueue() - РїРѕРјРµС‰Р°РµС‚ СЌР»РµРјРµРЅС‚ РІ РєРѕРЅРµС† РѕС‡РµСЂРµРґРё,
+//        dequeue() - РІРѕР·РІСЂР°С‰Р°РµС‚ РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РёР· РѕС‡РµСЂРµРґРё Рё СѓРґР°Р»СЏРµС‚ РµРіРѕ,
+//        first() - РІРѕР·РІСЂР°С‰Р°РµС‚ РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РёР· РѕС‡РµСЂРµРґРё, РЅРµ СѓРґР°Р»СЏСЏ.
+//        Р¤РѕСЂРјР°С‚ СЃРґР°С‡Рё: СЃСЃС‹Р»РєР° РЅР° РіРёС‚
 public class Implement_a_queue_with_LinkedList {
     public static void main(String[] args) {
         LinkedList<Integer> new_queue = new LinkedList<>();
@@ -26,7 +26,7 @@ public class Implement_a_queue_with_LinkedList {
     }
 
     public static int dequeue(LinkedList<Integer> queue) throws ArithmeticException {
-        if (queue.size() == 0) throw new ArithmeticException("Ошибка: очередь пуста!");
+        if (queue.size() == 0) throw new ArithmeticException("РћС€РёР±РєР°: РѕС‡РµСЂРµРґСЊ РїСѓСЃС‚Р°!");
         else {
             int temp = queue.get(0);
             queue.remove(queue.get(0));
@@ -35,7 +35,7 @@ public class Implement_a_queue_with_LinkedList {
     }
 
     public static int first(LinkedList<Integer> queue) {
-        if (queue.size() == 0) throw new ArithmeticException("Ошибка: очередь пуста!");
+        if (queue.size() == 0) throw new ArithmeticException("РћС€РёР±РєР°: РѕС‡РµСЂРµРґСЊ РїСѓСЃС‚Р°!");
         else return queue.get(0);
     }
 
