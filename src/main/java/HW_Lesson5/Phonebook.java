@@ -34,11 +34,14 @@ public class Phonebook {
                 }
             }
         }
-        System.out.println(phonebook);
         return phonebook;
     }
 
-    private void phonebookSorting(Map<String,ArrayList<String>>) {
-
+    public void phonebookSorting() {
+        Comparator<Map.Entry<String, ArrayList<String>>> valueComparator = ((o1, o2) ->
+                Integer.compare(o2.getValue().size(), o1.getValue().size()));
+        List<Map.Entry<String, ArrayList<String>>> sortedList = new ArrayList<>(phonebook.entrySet());
+        sortedList.sort(valueComparator);
+        sortedList.forEach(System.out::println);
     }
 }
