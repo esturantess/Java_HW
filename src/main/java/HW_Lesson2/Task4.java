@@ -10,14 +10,14 @@ public class Task4 {
     public static void main(String[] args) {
 
         Logger NEWLOGGER = Logger.getLogger(Task4.class.getName());
-        NEWLOGGER.log(Level.INFO, "Это простой калькулятор.");
+        NEWLOGGER.info("Это простой калькулятор.");
 
-        System.out.println("Введите операцию: ");
+        NEWLOGGER.info("Введите операцию: ");
         Scanner scanner = new Scanner(System.in);
         String operation = scanner.next();
-        System.out.println("Введите первое число: ");
+        NEWLOGGER.info("Введите первое число: ");
         int number1 = scanner.nextInt();
-        System.out.println("Введите второе число: ");
+        NEWLOGGER.info("Введите второе число: ");
         int number2 = scanner.nextInt();
         if (number2 == 0) throw new ArithmeticException("Ошибка: Попытка деления на 0!");
         int result = 0;
@@ -41,7 +41,7 @@ public class Task4 {
                 System.out.println("Ошибка: неверная операция");
                 break;
         }
-        System.out.println(number1 + " " + operation + " " + number2 + " = " + result);
+        NEWLOGGER.info(number1 + " " + operation + " " + number2 + " = " + result);
         scanner.close();
     }
 }
