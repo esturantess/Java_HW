@@ -1,14 +1,14 @@
 package HW_Lesson6;
 
-// Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы.
-// Реализовать в java.
-//        Создать множество ноутбуков (Set).
-//        Написать метод, который будет запрашивать у пользователя критерий
-//        (или критерии) фильтрации и выведет ноутбуки, отвечающие фильтру.
-//        Критерии фильтрации можно хранить в Map или в Сет. Например:
-//        “Введите цифру, соответствующую необходимому критерию:
-//        1 - цвет
-//        2 - бренд
+// РџРѕРґСѓРјР°С‚СЊ РЅР°Рґ СЃС‚СЂСѓРєС‚СѓСЂРѕР№ РєР»Р°СЃСЃР° РќРѕСѓС‚Р±СѓРє РґР»СЏ РјР°РіР°Р·РёРЅР° С‚РµС…РЅРёРєРё - РІС‹РґРµР»РёС‚СЊ РїРѕР»СЏ Рё РјРµС‚РѕРґС‹.
+// Р РµР°Р»РёР·РѕРІР°С‚СЊ РІ java.
+//        РЎРѕР·РґР°С‚СЊ РјРЅРѕР¶РµСЃС‚РІРѕ РЅРѕСѓС‚Р±СѓРєРѕРІ (Set).
+//        РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ Р·Р°РїСЂР°С€РёРІР°С‚СЊ Сѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РєСЂРёС‚РµСЂРёР№
+//        (РёР»Рё РєСЂРёС‚РµСЂРёРё) С„РёР»СЊС‚СЂР°С†РёРё Рё РІС‹РІРµРґРµС‚ РЅРѕСѓС‚Р±СѓРєРё, РѕС‚РІРµС‡Р°СЋС‰РёРµ С„РёР»СЊС‚СЂСѓ.
+//        РљСЂРёС‚РµСЂРёРё С„РёР»СЊС‚СЂР°С†РёРё РјРѕР¶РЅРѕ С…СЂР°РЅРёС‚СЊ РІ Map РёР»Рё РІ РЎРµС‚. РќР°РїСЂРёРјРµСЂ:
+//        вЂњР’РІРµРґРёС‚Рµ С†РёС„СЂСѓ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ РЅРµРѕР±С…РѕРґРёРјРѕРјСѓ РєСЂРёС‚РµСЂРёСЋ:
+//        1 - С†РІРµС‚
+//        2 - Р±СЂРµРЅРґ
 //
 
 import java.util.HashSet;
@@ -24,10 +24,10 @@ public class Main {
         Laptop laptop2 = new Laptop("P7E49NUMDVJ6", Brand.APPLE, Color.GOLD, Origin.USA);
         Laptop laptop3 = new Laptop("IU1F3RX6DH7B", Brand.ASUS, Color.BLACK, Origin.TAIWAN);
         Laptop laptop4 = new Laptop("ZJU6SL1TOERE", Brand.HUAWEI, Color.RED, Origin.CHINA);
-        Laptop laptop5 = new Laptop("AGU7ULVQOLMW", Brand.HUAWEI, Color.GRAY, Origin.CHINA); // повтор
+        Laptop laptop5 = new Laptop("AGU7ULVQOLMW", Brand.HUAWEI, Color.GRAY, Origin.CHINA); // РїРѕРІС‚РѕСЂ
         Laptop laptop6 = new Laptop("70J58J2TIZR0", Brand.HUAWEI, Color.SILVER, Origin.CHINA);
         Laptop laptop7 = new Laptop("GS0NDRHWBZCQ", Brand.APPLE, Color.WHITE, Origin.USA);
-        Laptop laptop8 = new Laptop("AGU7ULVQOLMW", Brand.HUAWEI, Color.GRAY, Origin.CHINA); // повтор
+        Laptop laptop8 = new Laptop("AGU7ULVQOLMW", Brand.HUAWEI, Color.GRAY, Origin.CHINA); // РїРѕРІС‚РѕСЂ
         Set<Laptop> laptops = new HashSet<>();
         laptops.add(laptop5);
         laptops.add(laptop1);
@@ -37,18 +37,18 @@ public class Main {
         laptops.add(laptop6);
         laptops.add(laptop7);
         laptops.add(laptop8);
-        System.out.println(laptops); // список без повторов
+        System.out.println(laptops); // СЃРїРёСЃРѕРє Р±РµР· РїРѕРІС‚РѕСЂРѕРІ
 
 
         Scanner scanner = new Scanner(System.in);
         Logger logger = Logger.getLogger(Laptop.class.getName());
-        logger.info("Добро пожаловать в магазин ноутбуков! Для вывода информации о товарах в наличии введите: 0 - все товары; 1 - сортировка по цвету; 2 - сортировка по бренду.");
+        logger.info("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ РјР°РіР°Р·РёРЅ РЅРѕСѓС‚Р±СѓРєРѕРІ! Р”Р»СЏ РІС‹РІРѕРґР° РёРЅС„РѕСЂРјР°С†РёРё Рѕ С‚РѕРІР°СЂР°С… РІ РЅР°Р»РёС‡РёРё РІРІРµРґРёС‚Рµ: 0 - РІСЃРµ С‚РѕРІР°СЂС‹; 1 - СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ С†РІРµС‚Сѓ; 2 - СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ Р±СЂРµРЅРґСѓ.");
         int userInput = scanner.nextInt();
         if (userInput == 0) {
             System.out.println(laptops);
         }
         if (userInput == 1) {
-            logger.info("Введите цифру, соответствующую цвету: BLACK - 1, WHITE - 2, GRAY - 3, PINK - 4, RED - 5, GOLD - 6, SILVER - 7");
+            logger.info("Р’РІРµРґРёС‚Рµ С†РёС„СЂСѓ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ С†РІРµС‚Сѓ: BLACK - 1, WHITE - 2, GRAY - 3, PINK - 4, RED - 5, GOLD - 6, SILVER - 7");
             int number_of_color = scanner.nextInt();
             if (number_of_color == 1) {
                 for (Laptop el : laptops) {
@@ -85,10 +85,10 @@ public class Main {
                     if (el.getColor() == Color.SILVER) System.out.println(el);
                 }
             }
-            if (number_of_color < 1 || number_of_color > 7) logger.info("Некорректный номер цвета!");
+            if (number_of_color < 1 || number_of_color > 7) logger.info("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РЅРѕРјРµСЂ С†РІРµС‚Р°!");
         }
         if (userInput == 2) {
-            logger.info("Введите цифру, соответствующую бренду: APPLE - 1, LENOVO - 2, ASUS - 3, HUAWEI - 4");
+            logger.info("Р’РІРµРґРёС‚Рµ С†РёС„СЂСѓ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ Р±СЂРµРЅРґСѓ: APPLE - 1, LENOVO - 2, ASUS - 3, HUAWEI - 4");
             int number_of_brand = scanner.nextInt();
                 if (number_of_brand == 1) {
                     for (Laptop el : laptops) {
@@ -111,10 +111,10 @@ public class Main {
                     }
                 }
             if (number_of_brand < 1 || number_of_brand >4) {
-                    logger.info("Некорректный номер бренда!");
+                    logger.info("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РЅРѕРјРµСЂ Р±СЂРµРЅРґР°!");
                 }
         } else {
-            logger.info("Некорректный код для вывода!");
+            logger.info("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РєРѕРґ РґР»СЏ РІС‹РІРѕРґР°!");
         }
     }
 }
