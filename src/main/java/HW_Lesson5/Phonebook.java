@@ -44,4 +44,9 @@ public class Phonebook {
         sortedList.sort(valueComparator);
         sortedList.forEach(System.out::println);
     }
-}
+
+//    public void phonebookSorting(Map<String, ArrayList<String>> phonebook) {
+//        Collection<ArrayList<String>> values = phonebook.values();
+//        values.
+//        System.out.println(values);
+    }
